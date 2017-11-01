@@ -56,7 +56,7 @@ var feed = function() {
             }
                   
             //$('#Tagdata').html(postids);
-            $(".postfeed").append('<div class="feedbox"><div class="feedbox-cell feedbox-cell-top"><ul><li><span><a href="'+website+"/"+"@"+author+'"><span class="Avatar Avatar-xs"><img src="" class="Avatar-img" /></span> '+" "+author+'</a></span> <span class="hidden-xs"><span>in</span> <a href="'+website+"/hot/"+category+'">#'+category+'</a></span></li> <li class="li-right"><span>'+postage+agedeno+'</span></li></ul></div> <div class="feedbox-cell feedbox-cell-body"><a href="'+link+'">'+postname+'</a></div>   <div class="feedbox-thumbnail"><a href="'+link+'"><img src="'+image+'" /></a></div> <div class="feedbox-cell feedbox-cell-text"><span><span>'+blurb+'</span></span></div>     </div>').fadeIn();
+            $(".postfeed").append('<div class="feedbox"><div class="feedbox-cell feedbox-cell-top"><ul><li><span><a href="'+website+"/"+"@"+author+'"><span class="Avatar Avatar-xs"><img src="" class="Avatar-img" /></span> '+" "+author+'</a></span> <span class="hidden-xs"><span>in</span> <a href="'+website+"/hot/"+category+'">#'+category+'</a></span></li> <li class="li-right"><span>'+postage+agedeno+'</span></li></ul></div> <div class="feedbox-cell feedbox-cell-body"><a href="'+link+'">'+postname+'</a></div>   <div class="feedbox-thumbnail"><a href="'+link+'"><img src="https://steemitimages.com/256x512/'+image+'" /></a></div> <div class="feedbox-cell feedbox-cell-text"><span><span>'+blurb+'</span></span></div>     </div>').fadeIn();
             
         }
     });
@@ -98,7 +98,7 @@ var loaddata = function() {
                         startpermlink = permlink;
                     }
                     
-                    $(".postfeed").append('<div class="feedbox"><div class="feedbox-cell feedbox-cell-top"><ul><li><span><a href="'+website+"/"+"@"+author+'"><span class="Avatar Avatar-xs"><img src="" class="Avatar-img" /></span> '+" "+author+'</a></span> <span class="hidden-xs"><span>in</span> <a href="'+website+"/hot/"+category+'">#'+category+'</a></span></li> <li class="li-right"><span>'+postage+agedeno+'</span></li></ul></div> <div class="feedbox-cell feedbox-cell-body"><a href="'+link+'">'+postname+'</a></div>   <div class="feedbox-thumbnail"><a href="'+link+'"><img src="'+image+'" /></a></div> <div class="feedbox-cell feedbox-cell-text"><span><span>'+blurb+'</span></span></div>     </div>').fadeIn();
+                    $(".postfeed").append('<div class="feedbox"><div class="feedbox-cell feedbox-cell-top"><ul><li><span><a href="'+website+"/"+"@"+author+'"><span class="Avatar Avatar-xs"><img src="" class="Avatar-img" /></span> '+" "+author+'</a></span> <span class="hidden-xs"><span>in</span> <a href="'+website+"/hot/"+category+'">#'+category+'</a></span></li> <li class="li-right"><span>'+postage+agedeno+'</span></li></ul></div> <div class="feedbox-cell feedbox-cell-body"><a href="'+link+'">'+postname+'</a></div>   <div class="feedbox-thumbnail"><a href="'+link+'"><img src="https://steemitimages.com/256x512/'+image+'" /></a></div> <div class="feedbox-cell feedbox-cell-text"><span><span>'+blurb+'</span></span></div>     </div>').fadeIn();
                     
                        
                 }
