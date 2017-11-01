@@ -1,4 +1,3 @@
-
 html {
   box-sizing: border-box;
 }
@@ -29,7 +28,7 @@ html {
 html,
 input,
 button {
-  font-family: "montserrat", sans-serif;
+  font-family: "Kalam", cursive;
 }
 
 body {
@@ -84,9 +83,10 @@ input {
 
 input {
   display: block;
-  background: #f4f5f5;
-  border: 3px solid #efefef;
-  padding: .3rem;
+  background: #fff;
+  border: 1px solid rgba(0,149,255,0.9);
+  border-radius: 5px;
+  padding: .25rem;
 }
 
 label {
@@ -102,6 +102,20 @@ label {
 input[type="text"] {
 
 }
+
+
+li, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.5px;
+}
+
+.li-right {
+    float: right!important;
+    letter-spacing: 0.5px;
+}
+
 
 .button,
 button {
@@ -147,7 +161,7 @@ td {
 .box {
   color: #444;
   background: #fff;
-  box-shadow: 0 0 20px 0 rgba(0,0,0,.05);
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.05);
   padding: 1.75rem;
   margin-bottom: 1rem;
   max-width: 35rem;
@@ -155,18 +169,140 @@ td {
   /*margin-right: -1rem;*/
 }
 
+.filterparameters {
+    margin-top: 1rem;
+    display: block;
+    float: left;
+    
+}
+
+.filterparameters input {
+    display:block;
+    float:left;
+    max-width: 10rem;
+    margin-left: 4rem;
+    margin-top: 0.25rem;
+    align-content:center;  
+}
+
+.filterparameters p {
+    margin-bottom: 0;
+    
+}
+
+
+
+.postfeed {
+    max-width: 85rem;
+    height: 100%;
+    overflow-y:auto;
+    margin-top: 20px;
+}
+
+.feedbox { 
+    color: #444;
+    border: 0.5px solid rgba(0,149,255,0.9);
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.05);
+    padding: 0.01rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem; 
+    width: 18rem;
+    height: 26rem;
+    float: left;
+    display: block;
+    
+}
+
+.feedbox-cell {
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.feedbox-cell-top {
+    border-bottom: 0.5px solid rgba(0,0,0,0.1);
+}
+
+.feedbox-cell-body {
+    padding: 0.25em 0.25em 0;
+    letter-spacing: 1px;
+}
+
+.feedbox-thumbnail {
+    background: #fff;
+    /*width: 100%;*/
+    max-height: 10.125rem;
+    text-align: center;
+    overflow: hidden;
+    border-top: 0.5px solid rgba(0,149,255,0.9);
+    position: relative;
+    
+}
+
+.feedbox-thumbnail img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.feedbox-cell-text {
+    
+    padding: 0 0.25em 0.25em;
+}
+
+.hidden-xs {
+    box-sizing: inherit;
+}
+
+
+
+
+.topnav {
+    background-color: #444;
+    overflow: hidden;
+    max-width: 40rem;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: .25rem 2rem;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.topnav a:hover {
+    background-color: cornflowerblue;
+    
+}
 
 
 .page-logo {
   display: inline-block;
   text-transform: uppercase;
-  letter-spacing: .25em;
+  letter-spacing: .10em;
   margin-top: 0;
   margin-bottom: 1rem;
   /*background: url(../img/CILogo.png) no-repeat left .05rem;*/
   background-size: 17%;
   padding-left: 1.8rem;
 }
+
+
+.loginbutton {
+    position: absolute;
+    top: -13.5rem;
+    right: -13.5rem;
+    height: 27rem;
+    width: 27rem; 
+    padding-top: 11rem;
+    padding-right: 12rem;
+    font-size: 2rem;
+}
+
 
 .login {
   margin-bottom: .25rem;

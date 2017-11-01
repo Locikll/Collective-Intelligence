@@ -7,55 +7,69 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="STEEM Collective Intelligence">
 
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
         <link rel="stylesheet" href="css/index.css">
 
  
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>  
         <script type="text/javascript" src="js/steem.min.js"></script>
-        
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/mdremove.js"></script>
 	</head>
 </html>
 
 <html>
 
 	<body>
-		<div class="container">
-            
-
-		</div>
-
-
-    
+  
   <header class="text-center">
 
     <h1 class="page-logo">Collective Intelligence</h1>
+      
 
-    <div class="login" id="login_link"><i class="material-icons small">vpn_key</i> <a href="#login_modal" data-toggle="login_modal">Log in with your steem account</a></div>
+    <!--<div class="login" id="login_link"><i class="material-icons small">vpn_key</i> <a href="#login_modal" data-toggle="login_modal">Log in with your steem account</a></div>-->
 
-    <p id="signup_link" class="small signup">
+    <!--<p id="signup_link" class="small signup">
       <a href="https://steemit.com/enter_email">New to steem?</a>
-    </p>
+    </p>-->
 
     <span id="logged_in_message">
       Logged in as <span class="username"></span><br />
       <a href="#logout" id="logout" class="small">Logout</a>    
     </span>
+      
+    <div class="topnav" id="navbartop">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+      
 
   </header>
+        
+    <div class="filterparameters">
+        <p><b> Filter Parameters:</b></p>
+        <br>
+        <span>
+        <input name="ignoredtags" placeholder="Ignored Tags">
+        <input name="test2"> 
+        </span>
+    </div>
+        
+    <div class="postfeed">
 
-<script type="text/javascript">
-    
-
-
-</script>    
+    </div>      
+        
+        
     
     
 
   <footer class="page-footer text-center smaller">
-    <p style="opacity: .5">Last Block: Block <span id="lastBlockHeight"></span> | ID <span id="lastBlockId"></span> | Result <span id="lastBlockGoal"></span></p>
+      
+      
     <p>
       <a href="#about" data-toggle="about_modal">about</a> |
       <a href="http://www.github.com/locikll" target="_blank">github</a> |
@@ -102,4 +116,3 @@
 
     </body>   
 </html>
-
