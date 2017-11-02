@@ -199,9 +199,19 @@ td {
     
 }
 
+
+.Avatar {
+    display: block;
+    border-radius: 50%;
+}
+.Avatar img {
+    border-style: none;
+}
+
+
 .feedbox { 
     color: #444;
-    border: 0.5px solid rgba(0,149,255,0.9);
+    border: 0.5px solid rgba(0,149,255,0.1);
     border-radius: 5px;
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.05);
@@ -215,6 +225,7 @@ td {
     display: block;
     
 }
+
 
 .feedbox-cell {
     vertical-align: middle;
@@ -233,11 +244,26 @@ td {
 
 .feedbox-cell-top {
     border-bottom: 0.5px solid rgba(0,0,0,0.1);
+    padding: 0.5em;
+    padding-left: 0em;
+    padding-right: 0em;
+    display: flex;
 }
 
 .feedbox-cell-top li {
+    padding: 0 0.125em;
+}
+
+.feedbox-cell-top a {
     padding: 0 0.5em;
 }
+
+.feedbox-cell-top span {
+    float: left;
+    display: flex;
+    
+}
+
 
 .feedbox-cell-body {
     font-size: 1em;
@@ -266,8 +292,40 @@ td {
     padding: 0 0.25em 0.25em;
 }
 
+
+.hidden-xs-usr {
+    text-align: center;
+    padding-top: 0em;
+    float: left;
+    margin-right: 1.33em;
+}
+
+
 .hidden-xs {
     box-sizing: inherit;
+    text-align: center;
+    padding-top: 0.4em;
+    
+}
+
+.hidden-xs a {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid transparent;
+    
+    margin-left: 0.1em;
+    
+    font-size: 0.8em;
+    
+    border-radius: 6px;
+    border-color: cornflowerblue;
+    color: cornflowerblue;
+    
+    position: relative;
+    
+    padding: 0.2em 0.2em;
+    line-height: 21px;
 }
 
 
