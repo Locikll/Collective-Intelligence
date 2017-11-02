@@ -28,7 +28,7 @@ html {
 html,
 input,
 button {
-  font-family: "Kalam", cursive;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -193,10 +193,10 @@ td {
 
 
 .postfeed {
-    max-width: 85rem;
+    max-width: 85%;
     height: 100%;
-    overflow-y:auto;
     margin-top: 20px;
+    
 }
 
 .feedbox { 
@@ -206,9 +206,9 @@ td {
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.05);
     padding: 0.01rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-right: 2rem; 
+    margin-top: 1rem;
+    /*margin-bottom: 2rem;*/
+    margin-right: 1rem; 
     width: 18rem;
     height: 26rem;
     float: left;
@@ -221,11 +221,26 @@ td {
     overflow: hidden;
 }
 
+.feedbox-cell li:last-child {
+    border-right: none;
+}
+
+.feedbox-cell li {
+    font-size: 0.75em;
+    float:left;
+    vertical-align:middle;
+}
+
 .feedbox-cell-top {
     border-bottom: 0.5px solid rgba(0,0,0,0.1);
 }
 
+.feedbox-cell-top li {
+    padding: 0 0.5em;
+}
+
 .feedbox-cell-body {
+    font-size: 1em;
     padding: 0.25em 0.25em 0;
     letter-spacing: 1px;
 }

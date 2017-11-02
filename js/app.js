@@ -10,7 +10,9 @@ $( document ).ready(function() {
 
     //deltascroll = ($('.postfeed')[0].scrollHeight - $('.postfeed').scrollTop());
     
-    $('.postfeed').on('scroll',postfeedscroll);
+    //$('.postfeed').on('scroll',postfeedscroll);
+    
+    $(window).on('scroll',postfeedscroll);
     
     currentdatetime = new Date();
     datetimeoffset = (currentdatetime.getTimezoneOffset()*60000);
@@ -54,9 +56,9 @@ var feed = function() {
                 startauthor = author;
                 startpermlink = permlink;
             }
-                  
+            
             //$('#Tagdata').html(postids);
-            $(".postfeed").append('<div class="feedbox"><div class="feedbox-cell feedbox-cell-top"><ul><li><span><a href="'+website+"/"+"@"+author+'"><span class="Avatar Avatar-xs"><img src="" class="Avatar-img" /></span> '+" "+author+'</a></span> <span class="hidden-xs"><span>in</span> <a href="'+website+"/hot/"+category+'">#'+category+'</a></span></li> <li class="li-right"><span>'+postage+agedeno+'</span></li></ul></div> <div class="feedbox-cell feedbox-cell-body"><a href="'+link+'">'+postname+'</a></div>   <div class="feedbox-thumbnail"><a href="'+link+'"><img src="'+image+'" /></a></div> <div class="feedbox-cell feedbox-cell-text"><span><span>'+blurb+'</span></span></div>     </div>').fadeIn();
+            $(".postfeed").append('<div class="feedbox"><div class="feedbox-cell feedbox-cell-top"><ul><li><span><a href="'+website+"/"+"@"+author+'"><span class="Avatar Avatar-xs"><img src="" class="Avatar-img" /></span> '+" "+author+'</a></span> <span class="hidden-xs"><span>in</span> <a href="'+website+"/hot/"+category+'">#'+category+'</a></span></li> <li class="li-right"><span>'+postage+agedeno+'</span></li></ul></div> <div class="feedbox-cell feedbox-cell-body"><a href="'+link+'">'+postname+'</a></div>   <div class="feedbox-thumbnail"><a href="'+link+'"><img src="https://steemitimages.com/1280x720/'+image+'" /></a></div> <div class="feedbox-cell feedbox-cell-text"><span><span>'+blurb+'</span></span></div>     </div>').fadeIn();
             
         }
     });
@@ -98,7 +100,7 @@ var loaddata = function() {
                         startpermlink = permlink;
                     }
                     
-                    $(".postfeed").append('<div class="feedbox"><div class="feedbox-cell feedbox-cell-top"><ul><li><span><a href="'+website+"/"+"@"+author+'"><span class="Avatar Avatar-xs"><img src="" class="Avatar-img" /></span> '+" "+author+'</a></span> <span class="hidden-xs"><span>in</span> <a href="'+website+"/hot/"+category+'">#'+category+'</a></span></li> <li class="li-right"><span>'+postage+agedeno+'</span></li></ul></div> <div class="feedbox-cell feedbox-cell-body"><a href="'+link+'">'+postname+'</a></div>   <div class="feedbox-thumbnail"><a href="'+link+'"><img src="'+image+'" /></a></div> <div class="feedbox-cell feedbox-cell-text"><span><span>'+blurb+'</span></span></div>     </div>').fadeIn();
+                    $(".postfeed").append('<div class="feedbox"><div class="feedbox-cell feedbox-cell-top"><ul><li><span><a href="'+website+"/"+"@"+author+'"><span class="Avatar Avatar-xs"><img src="" class="Avatar-img" /></span> '+" "+author+'</a></span> <span class="hidden-xs"><span>in</span> <a href="'+website+"/hot/"+category+'">#'+category+'</a></span></li> <li class="li-right"><span>'+postage+agedeno+'</span></li></ul></div> <div class="feedbox-cell feedbox-cell-body"><a href="'+link+'">'+postname+'</a></div>   <div class="feedbox-thumbnail"><a href="'+link+'"><img src="https://steemitimages.com/1280x720/'+image+'" /></a></div> <div class="feedbox-cell feedbox-cell-text"><span><span>'+blurb+'</span></span></div>     </div>').fadeIn();
                     
                        
                 }
@@ -162,33 +164,79 @@ var postdata = function(result,posts) {
         
         timedelta = (ctime - posttime)/(1000);
         
+        // Second(s) denomination
         if(timedelta < 60) {
-            agedeno = ' seconds ago';
             postage = String(Math.round(timedelta));
+            
+            if(timedelta < 1) {
+            agedeno = ' second ago';
+            }
+            else{
+                agedeno = ' seconds ago';
+            }
+            
         } 
+        //Minute(s) Denomination
         if(timedelta > 60) {
+            
             postage = String(Math.round(timedelta/60));
-            agedeno = ' minutes ago';
+            
+            if(postage < 2){
+                agedeno = ' minute ago';
+            }
+            else{
+                agedeno = ' minutes ago';
+            }
         }
         if(timedelta > 3600) {
             postage = String(Math.round(timedelta/3600));
-            agedeno = ' hours ago';
+            
+            if(postage < 2){
+                agedeno = ' hour ago';
+            }
+            else{
+                agedeno = ' hours ago';
+            }
         }
         if(timedelta > 86400) {
             postage = String(Math.round(timedelta/86400));
-            agedeno = ' days ago';
+            
+            if(postage < 2){
+                agedeno = ' day ago';
+            }
+            else{
+                agedeno = ' days ago';
+            }
         }
         if(timedelta > 604800) {
             postage = String(Math.round(timedelta/604800));
-            agedeno = ' weeks ago';
+
+            if(postage < 2){
+                agedeno = ' week ago';
+            }
+            else{
+                agedeno = ' weeks ago';
+            }
         }
         if(timedelta > 2419200) {
             postage = String(Math.round(timedelta/2419200));
-            agedeno = ' months ago';
+            
+            if(postage < 2){
+                agedeno = ' month ago';
+            }
+            else{
+                agedeno = ' months ago';
+            }
         }
         if(timedelta > 220903200) {
             postage = String(Math.round(timedelta/220903200));
-            agedeno = ' years ago';
+            
+            if(postage < 2){
+                agedeno = ' year ago';
+            }
+            else{
+                agedeno = ' years ago';
+            }
         }
     
     return([title,author,tags,postname,blurb,link,url,postage,agedeno,permlink,identifier]);
@@ -203,7 +251,7 @@ loading = false;
 function postfeedscroll(e) {
     
     var elem = $(e.currentTarget);
-    if(!loading && (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()  ) ) {
+    if(!loading && ( $(document).height() - elem.scrollTop() == elem.outerHeight() ) ) {
         loading = true;
         loaddata();
         loading = false;

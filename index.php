@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="STEEM Collective Intelligence">
 
-        <link href="https://fonts.googleapis.com/css?family=Kalam:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
         <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
         <link rel="stylesheet" href="css/index.css">
 
@@ -15,8 +15,10 @@
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>  
         <script type="text/javascript" src="js/steem.min.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="js/mdremove.js"></script>
+        
+        <script type="text/javascript" src="js/app.js"></script>
+
 	</head>
 </html>
 
@@ -47,7 +49,6 @@
         <a href="#about">About</a>
     </div>
       
-
   </header>
         
     <div class="filterparameters">
@@ -67,16 +68,14 @@
     
     
 
-  <footer class="page-footer text-center smaller">
-      
-      
+  <!--<footer class="page-footer text-center smaller">    
     <p>
       <a href="#about" data-toggle="about_modal">about</a> |
       <a href="http://www.github.com/locikll" target="_blank">github</a> |
       <a href="http://www.steemit.com/@locikll">support</a> |
       <a href="#">daily reports</a>
     </p>
-  </footer>
+  </footer>-->
 
   <div id="login_modal" class="modal" data-toggle="login_modal">
     <div class="modal__inner box">
