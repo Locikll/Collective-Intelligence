@@ -36,7 +36,7 @@ body {
   color: #313c43;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: space-between;
   padding: 1.5rem;
 }
@@ -86,7 +86,9 @@ input {
   background: #fff;
   border: 1px solid rgba(0,149,255,0.9);
   border-radius: 5px;
-  padding: .25rem;
+  padding: .05rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.1rem;
 }
 
 label {
@@ -169,20 +171,28 @@ td {
   /*margin-right: -1rem;*/
 }
 
+#gra {    
+float: left;	
+width: 11rem;
+position: fixed;
+padding: 0.7rem;
+}
+
 .filterparameters {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     display: block;
     float: left;
-    
+    width: 100%;
+    margin-bottom: 0.2rem;
 }
 
 .filterparameters input {
     display:block;
     float:left;
-    max-width: 10rem;
+    /*max-width: 10rem;
     margin-left: 4rem;
     margin-top: 0.25rem;
-    align-content:center;  
+    align-content:center;  */
 }
 
 .filterparameters p {
@@ -190,13 +200,13 @@ td {
     
 }
 
-
+.pull-left{float: left;}
 
 .postfeed {
-    max-width: 85%;
     height: 100%;
     margin-top: 20px;
-    
+    margin-left: 12rem;
+    align-content: right;
 }
 
 
@@ -361,7 +371,7 @@ td {
   margin-bottom: 1rem;
   /*background: url(../img/CILogo.png) no-repeat left .05rem;*/
   background-size: 17%;
-  padding-left: 1.8rem;
+  padding-left: 0.03rem;
 }
 
 
