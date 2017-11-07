@@ -58,7 +58,7 @@ var feed = function() {
             }
             
             //$('#Tagdata').html(postids);
-            $(".postfeed").append('<div class="feedbox"><div class="feedbox-cell feedbox-cell-top"><ul><li><span><a href="'+website+"/"+"@"+author+'"><img class="Avatar" src="https://steemitimages.com/u/'+author+'/avatar/small" style="min-width: 40px; width:40px; height:40px;"></img></a></span> <div class="hidden-xs-usr"> <a href="'+website+"/"+"@"+author+'"> '+" "+author+' </a><br><a style="font-size:0.75em;" href="#">'+postage+agedeno+'</a></div> <span class="hidden-xs"> <a href="'+website+"/hot/"+category+'">#'+category+'</a></span></li> </ul></div> <div class="feedbox-cell feedbox-cell-body"><a href="'+link+'">'+postname+'</a></div>   <div class="feedbox-thumbnail"><a href="'+link+'"><img src="https://steemitimages.com/1280x720/'+image+'" /></a></div> <div class="feedbox-cell feedbox-cell-text"><span><span>'+blurb+'</span></span></div>     </div>').fadeIn();
+            $(".postfeed").append('<div class="feedbox"><div class="feedbox-cell feedbox-cell-top"><ul><li><span><a href="'+website+"/"+"@"+author+'"><img class="Avatar" src="https://steemitimages.com/u/'+author+'/avatar/small" style="min-width: 40px; width:40px; height:40px;"></img></a></span> <div class="hidden-xs-usr"> <a href="'+website+"/"+"@"+author+'"> '+" "+author+' </a><br><a style="font-size:0.75em;" href="#">'+postage+agedeno+'</a></div> <span class="hidden-xs"> <a href="'+website+"/hot/"+category+'">#'+category+'</a></span></li> </ul></div> <div class="feedbox-cell feedbox-cell-body"><a href="'+link+'">'+postname+'</a></div>   <div class="feedbox-thumbnail"><a href="'+link+'"><img src="https://steemitimages.com/256x512/'+image+'" /></a></div> <div class="feedbox-cell feedbox-cell-text"><span><span>'+blurb+'</span></span></div>     </div>').fadeIn();
             
         }
     });
@@ -100,7 +100,7 @@ var loaddata = function() {
                         startpermlink = permlink;
                     }
                     
-                    $(".postfeed").append('<div class="feedbox"><div class="feedbox-cell feedbox-cell-top"><ul><li><span><a href="'+website+"/"+"@"+author+'"><img class="Avatar" src="https://steemitimages.com/u/'+author+'/avatar/small" style="min-width: 40px; width:40px; height:40px;"></img></a></span> <div class="hidden-xs-usr"> <a href="'+website+"/"+"@"+author+'"> '+" "+author+' </a><br><a style="font-size:0.75em;" href="#">'+postage+agedeno+'</a></div> <span class="hidden-xs"> <a href="'+website+"/hot/"+category+'">#'+category+'</a></span></li> </ul></div> <div class="feedbox-cell feedbox-cell-body"><a href="'+link+'">'+postname+'</a></div>   <div class="feedbox-thumbnail"><a href="'+link+'"><img src="https://steemitimages.com/1280x720/'+image+'" /></a></div> <div class="feedbox-cell feedbox-cell-text"><span><span>'+blurb+'</span></span></div>     </div>').fadeIn();
+                    $(".postfeed").append('<div class="feedbox"><div class="feedbox-cell feedbox-cell-top"><ul><li><span><a href="'+website+"/"+"@"+author+'"><img class="Avatar" src="https://steemitimages.com/u/'+author+'/avatar/small" style="min-width: 40px; width:40px; height:40px;"></img></a></span> <div class="hidden-xs-usr"> <a href="'+website+"/"+"@"+author+'"> '+" "+author+' </a><br><a style="font-size:0.75em;" href="#">'+postage+agedeno+'</a></div> <span class="hidden-xs"> <a href="'+website+"/hot/"+category+'">#'+category+'</a></span></li> </ul></div> <div class="feedbox-cell feedbox-cell-body"><a href="'+link+'">'+postname+'</a></div>   <div class="feedbox-thumbnail"><a href="'+link+'"><img src="https://steemitimages.com/256x512/'+image+'" /></a></div> <div class="feedbox-cell feedbox-cell-text"><span><span>'+blurb+'</span></span></div>     </div>').fadeIn();
                     
                        
                 }
@@ -122,7 +122,7 @@ var postdata = function(result,posts) {
         metadata = JSON.parse(result[posts]['json_metadata']);
             
         if(metadata.image === undefined) {
-            image = '';//'http://files.coinmarketcap.com.s3-website-us-east-1.amazonaws.com/static/img/coins/200x200/steem.png';
+            image = 'http://files.coinmarketcap.com.s3-website-us-east-1.amazonaws.com/static/img/coins/200x200/steem.png';//'http://files.coinmarketcap.com.s3-website-us-east-1.amazonaws.com/static/img/coins/200x200/steem.png';
         }
         else {
             image = metadata.image[0];
