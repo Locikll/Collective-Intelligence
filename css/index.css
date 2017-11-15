@@ -1,3 +1,5 @@
+
+
 html {
   box-sizing: border-box;
 }
@@ -192,14 +194,30 @@ td {
 
 
 
-.postfeed {
+.papacontainer{
     max-width: 85%;
+    display:flex;
+}
+
+.papacontainer > div {
+    flex:1; 
+}
+
+.postfeed {
+    /*max-width: 85%;*/
+    width: auto;
     height: 100%;
     margin-top: 20px;
+    
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
     
 }
 
 
+/*CARDS START*/
 .Avatar {
     display: block;
     border-radius: 50%;
@@ -218,7 +236,8 @@ td {
     padding: 0.01rem;
     margin-top: 1rem;
     /*margin-bottom: 2rem;*/
-    margin-right: 1rem; 
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     width: 18rem;
     height: 26rem;
     float: left;
@@ -264,7 +283,6 @@ td {
     
 }
 
-
 .feedbox-cell-body {
     font-size: 1em;
     padding: 0.25em 0.25em 0;
@@ -292,14 +310,12 @@ td {
     padding: 0 0.25em 0.25em;
 }
 
-
 .hidden-xs-usr {
     text-align: center;
     padding-top: 0em;
     float: left;
     margin-right: 1.33em;
 }
-
 
 .hidden-xs {
     box-sizing: inherit;
@@ -327,10 +343,160 @@ td {
     padding: 0.2em 0.2em;
     line-height: 21px;
 }
+/*CARDS STOP*/
+
+
+/*SIMPLE CURATOR DESIGN START*/
+
+.feedcurator {
+    color: #444;
+    border: 0.5px solid rgba(0,149,255,0.1);
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.05);
+    
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    padding-right: 0.5rem;
+    
+    overflow:hidden;
+    
+    margin-top: 0.25rem;
+    /*margin-bottom: 2rem;*/
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    
+    display:flex;
+    
+    text-align: left;
+    font-size: 0.70em;
+    
+}
+
+.feedcurator p {
+    margin-left: 0.5rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    
+}
+
+.feedcurator a {
+    color: #5B89DB;
+}
+
+.feedcurator a:hover {
+    
+    color: cornflowerblue;
+    cursor:pointer;
+}
+
+
+.feedcurator-thumbcont {
+    overflow: hidden;
+    width: 112px;
+    height: 63.5px;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.feedcurator-thumbcont img {
+    position: absolute;
+    width: 100% !important;
+    top: 50%;
+    
+    transform: translateY(-50%);
+}
+
+
+.feedcuratorrep {
+    border: 0.5px solid rgba(0,149,255,0.9);
+    border-radius: 2px;
+    font-size: 0.675em;
+    padding: 0.2em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+/*SIDEBAR and POSTBOX*/
+
+.curator-postview {
+
+    color: #444;
+    border: 0.5px solid rgba(0,149,255,0.1);
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.05);
+    
+    margin-top: 0.75rem;
+
+    float:right;
+    
+    height: 80vh;
+
+    overflow-y:scroll;
+    
+    text-overflow:clip;
+}
+
+.curator-postview p {
+    margin: 0.25em;
+}
+
+
+.feedcurator-postbox {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+.feedcurator-postbox img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+.feedcurator-postbox-title {
+    display: block;
+    
+    font-weight:bold;
+    
+    font-size: 22px;
+    padding-top: 10px;
+    padding-bottom: 10x;
+    margin: 0em;
+    
+}
+
+
+.feedcurator-postbox-close {
+    display: block;
+    float: right;
+    font-size: 43px;
+    overflow: hidden;
+    margin: 0em;
+    position:sticky;
+    top:0px;
+    
+}
+
+.feedcurator-postbox-close:hover {
+    color:#DB5B5B;
+    cursor:pointer;
+}
+
+/*SIMPLE CURATOR DESIGN STOP*/
+
+
+
+/*FILTERING PARAMETERS MENU*/
 
 
 
 
+/*FILTERING PARAMETERS MENU STOP*/
 .topnav {
     background-color: #444;
     overflow: hidden;

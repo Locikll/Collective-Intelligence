@@ -16,6 +16,10 @@
         <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>  
         <script type="text/javascript" src="js/steem.min.js"></script>
         <script type="text/javascript" src="js/mdremove.js"></script>
+        <script type="text/javascript" src="js/showdown.min.js"></script>
+        <script type="text/javascript" src="js/markdown.js"></script>
+        
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
         
         <script type="text/javascript" src="js/app.js"></script>
 
@@ -52,19 +56,37 @@
   </header>
         
     <div class="filterparameters">
-        <p><b> Filter Parameters:</b></p>
+        
+        
+        <div id="slider-range"></div>
+        <div id="slider-range1"></div>
+        
+        
+        <!--<p><b> Filter Parameters:</b></p>
         <br>
         <span>
         <input name="ignoredtags" placeholder="Ignored Tags">
         <input name="test2"> 
-        </span>
+        </span>-->
+        <span class="curatormode"><span>Card Mode</span></span>
+        <span class="cardmode"><span>Curator Mode</span></span>
     </div>
+        
+    
+    <div class="papacontainer">
+
+        
         
     <div class="postfeed">
 
     </div>      
         
         
+    <div class="curator-postview">
+    </div> 
+        
+    </div>
+   
     
     
 
